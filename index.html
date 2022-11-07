@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Resume Generator</title>
+</head>
+<body>
+
+<!-- form part -->
+
+<div class="container" id="resume-form">
+    <h1 class="main-heading">Resume Generator</h1>
+        <div class="row">
+            <div class="col-sm-6 mt -3">
+                <!-- COL 1 personal details -->
+                <h3>Personal Details</h3>
+
+                <!-- name -->
+
+                <div class="form-group">
+                    <label for="nameField">Your name</label>
+                    <input type="text" required
+                    id="nameField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                </div>
+
+                <!-- address -->
+                    <div class="form-group">
+                    <label for="addressField">Your Address</label>
+                    <textarea
+                    id="addressField"
+                    placeholder="Enter here"
+                    class="form-control"
+                    rows="10">
+                    </textarea>
+                    </div>
+
+                <!-- contact no -->
+                    <div class="form-group">
+                    <label for="contactField">Your contact no</label>
+                    <input type="text"
+                    id="contactField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+                <!-- DOB -->
+                    <div class="form-group">
+                    <label for="dobField">Your Date of Birth</label>
+                    <input type="text"
+                    id="dobField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+                <!-- mail id -->
+                    <div class="form-group">
+                    <label for="mailField">Your email no</label>
+                    <input type="text"
+                    id="mailField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+                
+                   <p class="declare">Declaration with signature</p>
+
+                    <p>I gravely announce that facts of information and facts in the resume are inclusive and correct and I take full liability for the correctness of the information.</p>
+            </div>
+            
+            <div class="col-md-6 mt-3">
+                <!-- COL 2 work experience -->
+                <h3>Work Experience</h3>
+
+                <!-- company name -->
+                    <div class="form-group">
+                    <label for="companynameField">Company name</label>
+                    <input type="text"
+                    id="companynameField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+                <!--position name  -->
+                    <div class="form-group">
+                    <label for="positionField">Your Position</label>
+                    <input type="text"
+                    id="positionField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+                <!-- duration(work experience) -->
+                    <div class="form-group">
+                    <label for="durationField">Duration</label>
+                    <input type="text"
+                    id="durationField"
+                    placeholder="Enter here"
+                    class="form-control"
+                     />
+                    </div>
+
+            
+
+                    
+                        <div class="row-sm-6 mt-3" >
+                            <!-- COL 2(row 1) Skills -->
+                            <h3 >Skills with rating</h3><p>(Beginner,Intermediate,professional)</p>
+
+                            <!-- skills with rating -->
+                            <div class="form-group" id="ski"  >
+                            <label for="">Skills</label>
+                            <input type="text" 
+                            
+                            placeholder="Enter here"
+                            class="form-control skField"
+                             />
+                            </div>
+                        </div>
+        
+                            <!-- button to add skill -->
+                            <div class="container text-center mt-3" id="skAddButton">
+                                <button onclick="addNewSkillField()" class="btn btn-primary btn-sm">Add</button>
+                            </div>
+
+                            <div class="row-sm-6" id="comm" >
+                                <!--  COL 2(row 2) Communication skills -->
+                                <h3 >Communication Skills</h3><p>(Read,Write,Speak,Native)</p>
+        
+                                    <div class="form-group" >
+                                    <label for="commField">Languages</label>
+                                    <input type="text"
+                                    placeholder="Enter here"
+                                    class="form-control cmField "
+                                     />
+                                    </div>
+                            
+                                    <!-- button to add language -->
+                                    <div class="container text-center mt-3" id="commAddButton">
+                                        <button onclick="addNewcommField()" class="btn btn-primary btn-sm">Add</button>
+                                    </div>
+                            </div>
+
+                        <div class="row-md-6">
+                            <!--  COL 2(row 2)  Academic details-->
+                            <h3 class="Academic-del">Academic details</h3>
+
+                            <!-- Institution name -->
+                            <div class="form-group">
+                            <label for="institutionnameField">Institution name</label>
+                            <input type="text"
+                            id="institutionnameField"
+                            placeholder="Enter here"
+                            class="form-control"
+                             />
+                            </div>
+            
+                            <!-- Stream name -->
+                                <div class="form-group">
+                            <label for="streamField">Stream</label>
+                            <input type="text"
+                            id="streamField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                            </div>
+
+                            <!-- Duration (Academics) -->
+                            <div class="form-group">
+                            <label for="duration1Field">Duration</label>
+                            <input type="text"
+                            id="duratField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                            </div>  
+                        </div>
+            </div>
+        </div>
+
+                    <!-- Button to generate CV -->
+                     <div class="container text-center mt-3">
+                        <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+                    </div>
+    </div>
+
+   </div>
+
+
+    <!-- template part -->
+   <div class="container" id="resume-template">
+
+        <div class="row">
+
+                <div class="col-md-4 text-center py-5 background">
+                    <!-- COL 1 -->
+
+                    <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg"
+                    class="img-fluid my-img"/>
+                    <!-- personal details template -->
+                    <div class="container">
+                        <p id="nameT">Demo Name</p>
+                        <p id="addressT">House NO/House Name<br> Street Name, City Name<br> State - PinCode </p>
+                        <p id="contactT">9999988888</p>
+                        <p id="dobT">01/06/2001</p>
+                        <p id="mailT">demoid@gmail.com</p>
+                        <hr>
+                        <!-- skills template -->
+                        <p class=" skills-temp text-center">Skills</p>
+
+                        <ul id="skillT" class="list">
+                        <li>skill 1</li>
+                        <li>skill 2</li>
+                        <li>skill 3</li>
+                        <li>skill 4</li>
+                        </ul>
+                    </div>
+                 </div>
+        
+               <div class="col-md-8 py-2">
+                 <!-- COL 2 -->
+                    <h1 id="nameT2" class="text-center" style="font-weight: 890">Demo Name</h1>
+               
+                    <div class="card mt-3 ">
+                        <div class="card-header background">
+                            <h3>Work experience</h3>
+                        </div>
+                        
+                            <div class="card-body">
+                                <!-- work details template -->
+                                <p id="compT"> I worked in a demo company</p>
+                                
+                                <p id="posT">Worked as a demo position</p>
+                                
+                                <p id="durT">Worked from date1 to date2</p>
+                            </div>   
+                    </div>
+
+                    <div class="card mt-3 ">
+                        <div class="card-header background">
+                            <h3>Academic details</h3>
+                        </div>
+
+                            <div class="card-body">
+                                <!-- academic details template-->
+                                
+                                    <p id="insT">I pursued my degree in a demo </p>
+                                    <p id="subT">My name subject was demo</p>
+                                    <p id="duraT">Course duration from date1 to date2</p>
+                            </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header background">
+                            <h3>Languages known</h3>
+                        </div>
+
+                            <div id="langT"class="card-body">
+                                <!-- languages details template-->
+                                <ul class="academic-temp">
+                                    <li>Language1</li>
+                                    <li>Language2</li>
+                                    <li>Language3</li>
+                                </ul>
+                            </div>
+
+                    </div>
+
+                    <div class="card mt-3">
+                        <div id="declarationT "class="card-header background">
+                            <h3>Declaration with signature</h3>
+                        </div>
+                            <div class="card-body">
+                                <!-- declaration template -->
+                                <p>I gravely announce that facts of information and facts in the resume are inclusive and correct and I take full liability for the correctness of the information.</p>
+
+                            </div>
+
+                    </div>
+            
+                    <div class="container mt-3 text-center">
+                        <button onclick="printCV()" class="btn background">
+                        Print CV</button>
+                    </div>
+                </div>             
+              
+        </div>
+    </div>
+   </div>
+</div>
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>

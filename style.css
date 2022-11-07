@@ -1,0 +1,47 @@
+.main-heading
+{
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+
+
+.declare
+{
+    font-size: 1.75rem;
+    margin-top: 100px;
+}
+
+/* #resume-form{
+    display: none;
+} */
+
+.my-img
+{
+    border-radius:50%;
+    width:150px;
+
+}
+.background{
+    background-color: grey;
+}
+
+.skills-temp
+{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.list{
+    text-align: left;
+}
+
+.col-md-8{
+    float: left;
+}
+
+#resume-template
+{
+    display: none;
+}
